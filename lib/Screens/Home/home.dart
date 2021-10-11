@@ -1,7 +1,9 @@
 import 'package:facebook_clone/Components/ButtonCircle/button_circle.dart';
 import 'package:facebook_clone/Components/Createposts/create_post.dart';
+import 'package:facebook_clone/Components/ListPosts/list_posts.dart';
 import 'package:facebook_clone/Components/ListStories/list_story.dart';
 import 'package:facebook_clone/Data/data.dart';
+import 'package:facebook_clone/Models/models.dart';
 import 'package:facebook_clone/utils/color.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
@@ -56,12 +58,11 @@ class _HomeState extends State<Home> {
               stories: stories,
             ),
           ),
-          SliverToBoxAdapter(
-            child: Container(
-              color: Colors.green,
-              height: 2000,
-            ),
-          ),
+          SliverList(
+              delegate: SliverChildBuilderDelegate((context, indice) {
+            Post post = posts[indice];
+            return PostList(post: post);
+          }, childCount: posts.length))
         ],
       ),
     );

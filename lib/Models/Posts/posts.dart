@@ -1,6 +1,6 @@
 import 'package:facebook_clone/Models/models.dart';
 
-class Posts {
+class Post {
   User user;
   String description;
   String time;
@@ -9,7 +9,7 @@ class Posts {
   int comments;
   int shareds;
 
-  Posts({
+  Post({
     required this.user,
     required this.description,
     required this.time,

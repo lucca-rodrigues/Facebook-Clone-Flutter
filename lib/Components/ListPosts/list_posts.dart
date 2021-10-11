@@ -3,9 +3,9 @@ import 'package:facebook_clone/Components/PerfilImage/perfil_image.dart';
 import 'package:facebook_clone/Models/models.dart';
 import 'package:flutter/material.dart';
 
-class CardPostss extends StatelessWidget {
-  final Posts post;
-  const CardPostss({Key? key, required this.post}) : super(key: key);
+class PostList extends StatelessWidget {
+  final Post post;
+  const PostList({Key? key, required this.post}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +42,7 @@ class CardPostss extends StatelessWidget {
 }
 
 class HeaderPosts extends StatelessWidget {
-  final Posts post;
+  final Post post;
 
   const HeaderPosts({Key? key, required this.post}) : super(key: key);
 
