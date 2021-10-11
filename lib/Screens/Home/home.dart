@@ -1,5 +1,6 @@
 import 'package:facebook_clone/Components/ButtonCircle/button_circle.dart';
 import 'package:facebook_clone/Components/Createposts/create_post.dart';
+import 'package:facebook_clone/Components/ListStories/list_story.dart';
 import 'package:facebook_clone/Data/data.dart';
 import 'package:facebook_clone/utils/color.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,12 @@ class _HomeState extends State<Home> {
           SliverToBoxAdapter(
             child: CreatePost(
               user: currentUser,
+            ),
+          ),
+          SliverToBoxAdapter(
+            child: StoryList(
+              user: currentUser,
+              stories: stories,
             ),
           ),
           SliverToBoxAdapter(
